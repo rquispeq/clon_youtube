@@ -45,6 +45,10 @@ body,button{
     font-family: var(--body-font);
 }
 
+body{
+    background-color: var(--bg-color-alt);
+}
+
 h1,h2,h3,h4,h5,h6,b{
     font-weight: var(--font-bold);
 }
@@ -77,6 +81,7 @@ img{
     align-items: center;
     padding: 0 1rem;
     height: var(--header-height);
+    background-color: var(--bg-color);
 }
 
 .main-header .logo{
@@ -180,6 +185,7 @@ img{
 /* Sidebar */
 
 .main-sidebar{
+    --main-nav-padding: 0.5rem 1.5rem;
     position: fixed;
     height: calc(100vh - var(--header-height));
     background-color: var(--bg-color);
@@ -187,4 +193,33 @@ img{
     width: var(--sidebar-width);
     padding: 0.75rem 0;
     overflow: auto;
+}
+
+.main-sidebar .link{
+    padding: var(--main-nav-padding);
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: var(--small-font-size);
+    /* background-color: green; */
+    display: flex;
+    align-items: center;
+}
+
+.main-nav .link .icon{
+    font-size: 1.5rem;
+    margin-right: 1.5rem;
+    color: var(--text-color-alt);
+}
+
+.main-nav .link.is-active,
+.main-nav .link:hover{
+    background-color: var(--bg-color-active);
+}
+
+.main-nav .link.is-active{
+    font-weight: var(--font-bold);
+}
+
+.main-nav .link.is-active .icon{
+    color: var(--accent_color)
 }
