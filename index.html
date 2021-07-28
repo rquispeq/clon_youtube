@@ -1,11 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
+    <header class="main-header">
+        <div class="place-center">
+            <button  class="action-button fas fa-bars"></button>
+            <img src="img/logo.svg" class="logo" alt="Logo Youtube">
+        </div>
+
+        <div class="middle place-center">
+            <form class="form-search place-center" action="#">
+                <input type="search" placeholder="Buscar" class="input">
+                <button data-tooltip="Buscar" class="submit fas fa-search"></button>
+            </form>
+            <button data-tooltip="Haz búsqueda por voz" class="action-button fas fa-microphone"></button>
+        </div>
+
+        <div class="place-center buttons-container">
+            <button data-tooltip="Crear" class="action-button fas fa-video"></button>
+            <button data-tooltip="Aplicaciones de Youtube" class="action-button fas fa-th"></button>
+            <button data-tooltip="Notificaciones" class="action-button fas fa-bell"></button>
+            <div class="user-avatar">
+                <img class="image"
+                    src="https://www.pngkit.com/png/full/115-1150342_user-avatar-icon-iconos-de-mujeres-a-color.png"
+                    alt="Foto del usuario">
+            </div>
+        </div>
+    </header>
 </body>
+
 </html>

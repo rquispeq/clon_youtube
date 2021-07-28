@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* Base Colors */
+    --accent_color: #ff0000;
+    --grey-color: #909090;
+    --grey-color-alt : #ccc;
+    --border-color: rgba(0,0,0,.1);
+
+    /* Background Colors */
+    --bg-color: #fff;
+    --bg-color-alt: #f9f9f9;
+    --bg-color-active: #e5e5e5;
+
+    /* Text colors */
+    --text-color: #030303;
+    --text-color-alt: #606060;
+    --text-color-white: white;
+
+    /* Fonts */
+    --body-font: 'Roboto', sans-serif;
+    --icon-font: 'icomoon';
+
+    /* Font sizes */
+    --big-font-size: 1.125rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.75rem;
+    --font-bold: 500;
+
+    --header-height: 56px;
+    --z-tooltip: 25;
+    --z-fixed: 100;
+    --border-radius: 2px;
+}
+
+body,button{
+    font-family: var(--body-font);
+}
+
+h1,h2,h3,h4,h5,h6,b{
+    font-weight: var(--font-bold);
+}
+
+img{
+    width: 100%;
+}
+
+.place-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons-container{
+    display: flex;
+    gap: 0.5rem;
+    padding: 0 1rem;
+}
+
+/* WEBSITE MAIN HEADER   */
+.main-header{
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    height: var(--header-height);
+}
+
+.main-header .logo{
+    width: 6rem;
+}
+
+.user-avatar{
+    --size: 2rem;
+    width: var(--size);
+    height: var(--size);
+    cursor: pointer;
+    flex: none;
+}
+
+.user-avatar .image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.main-header .middle{
+    flex-basis: 720px;
+    padding: 0 2rem;
+}
+
+.main-header .form-search{
+    flex-grow: 1;
+    align-items: stretch;
+}
+
+.main-header .input{
+    flex-grow: 1;
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-right: none;
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+
+.main-header .submit{
+    padding: 0 1.5rem;
+    border: 1px solid var(--border-color);
+    font-size: 1.25rem;
+    color: var(--text-color-alt);
+    align-self: stretch;
+    border-radius:  0 var(--border-radius) var(--border-radius) 0;
+    cursor: pointer;
+}
+
+/* Actions buttones */
+.action-button{
+    --size : 2.5rem;
+    height: var(--size);
+    width: var(--size);
+    border-radius: 50%;
+    border: 1px solid transparent;
+    background: none;
+    transition: border-color 0.5s;
+    cursor: pointer;
+}
+
+.action-button::before{
+    color: var(--text-color-alt);
+    font-size: 1.5em;
+}
+
+.action-button:active{
+    background-color: var(--bg-color-active);
+    border-color: var(--bg-color-active);
+}
+
+/* Tooltip */
+[data-tooltip]{
+    position: relative;
+}
+
+[data-tooltip]::after{
+    content: attr(data-tooltip);
+    position: absolute;
+    padding: 0.5rem;
+    left: 50%;
+    top: 3.5rem;
+    font-weight: var(--font-bold);
+    font-size: initial;
+    transform: translateX(-50%);
+    background-color: var(--text-color-alt);
+    color: var(--text-color-white);
+    font-family: var(--body-font);
+    border-radius: var(--border-radius);
+    opacity: 0;
+    pointer-events: none;
+    white-space: nowrap;
+    transition: opacity 0.25s;
+    z-index: var(--z-tooltip);
+}
+
+[data-tooltip]:hover::after{
+    opacity: 1;
+}
+
