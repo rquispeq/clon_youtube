@@ -39,6 +39,14 @@
     --z-fixed: 100;
     --border-radius: 2px;
     --sidebar-width: 240px;
+
+    /* Scroll */
+    --scrol-size: 1rem;
+    --scroll-bg: transparent;
+    --scroll-radius: 0.5rem;
+    --scroll-padding: 0.25rem;
+    --thumb-bg: var(--grey-color);
+    --thumb-bg-alt: var(--grey-color-alt);
 }
 
 body,button{
@@ -290,3 +298,29 @@ hr{
     opacity: 0.8;
     color: var(--text-color-alt);
 }
+
+/* SCROLL */
+.scroll::-webkit-scrollbar{
+    width: var(--scroll-size); /*el scroll de Y*/
+    height: var(--scroll-size); /*el scroll de X*/
+}
+
+.scroll::-webkit-scrollbar-thumb{
+    border-radius: var(--scroll-radius);
+    border: var(--scroll-padding) solid transparent;
+    background-clip: content-box;
+}
+
+.scroll::-webkit-scrollbar-thumb:hover,
+.scroll:not(body):hover::-webkit-scrollbar-thumb{
+    display: block;
+}
+
+.scroll:not(body)::-webkit-scrollbar-thumb{
+    display: none;
+    background-color: var(--thumb-bg-alt);
+}
+
+/* .scroll:not(body):hover::-webkit-scrollbar-thumb{
+    display: block;
+} */
