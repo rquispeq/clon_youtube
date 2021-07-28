@@ -63,6 +63,14 @@ img{
     align-items: center;
 }
 
+hr{
+    --spacing: 0.75rem;
+    border: none;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: var(--spacing);
+    padding-top: var(--spacing);
+}
+
 .buttons-container{
     display: flex;
     gap: 0.5rem;
@@ -206,8 +214,7 @@ img{
 }
 
 .main-nav .link .icon{
-    font-size: 1.5rem;
-    margin-right: 1.5rem;
+    font-size: 1.3rem;
     color: var(--text-color-alt);
 }
 
@@ -222,4 +229,64 @@ img{
 
 .main-nav .link.is-active .icon{
     color: var(--accent_color)
+}
+
+/* Titulo de nav lateral */
+.nav-title{
+    text-transform: uppercase;
+    color: var(--text-color-alt);
+    font-size: var(--small-font-size);
+    padding: var(--main-nav-padding);
+}
+
+.main-nav .link .icon,
+.main-nav .link .user-avatar{
+    margin-right: 1.5rem;
+}
+
+.main-nav .link .user-avatar{
+    --size: 1.5rem;
+}
+
+.main-nav .link.is-in-live::after,
+.main-nav .link.is-new::after{
+    content: var(--link-icon);
+    /* font-family: var(--icon-font); */
+    font-family: 'Font Awesome 5 Pro';
+    font-weight: 900;
+    margin-left: auto;
+}
+
+.main-nav .link.is-in-live::after{
+    content: '\f519';
+    color: var(--accent_color);
+}
+
+.main-nav .link.is-new::after{
+    content: '\f111';
+    color: #065fd4;
+    font-size: calc(var(--smaller-font-size)/2);
+}
+
+
+/* footer */
+.main-nav-footer{
+    padding: var(--main-nav-padding);
+    display: grid;
+    gap: 0.65rem;
+    font-size: var(--smaller-font-size);
+}
+
+
+.main-nav-footer .link-footer{
+    margin-right: 0.5rem;
+    line-height: 1.4;
+    text-decoration: none;
+    font-weight: var(--font-bold);
+    color: var(--text-color-alt);
+}
+
+.main-nav-footer .copyright{
+    opacity: 0.8;
+    color: var(--text-color-alt);
 }
