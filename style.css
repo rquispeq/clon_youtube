@@ -55,6 +55,7 @@ body,button{
 
 body{
     background-color: var(--bg-color-alt);
+    line-height: 1.15rem;
 }
 
 h1,h2,h3,h4,h5,h6,b{
@@ -63,6 +64,10 @@ h1,h2,h3,h4,h5,h6,b{
 
 img{
     width: 100%;
+}
+
+.flex{
+    display: flex;
 }
 
 .place-center{
@@ -216,9 +221,9 @@ hr{
     text-decoration: none;
     color: var(--text-color);
     font-size: var(--small-font-size);
-    /* background-color: green; */
     display: flex;
     align-items: center;
+    white-space: nowrap;
 }
 
 .main-nav .link .icon{
@@ -321,6 +326,71 @@ hr{
     background-color: var(--thumb-bg-alt);
 }
 
-/* .scroll:not(body):hover::-webkit-scrollbar-thumb{
+/* CARD VIDEO */
+
+.card-video{
+    max-width: 300px;
+}
+
+.card-video a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.card-video .cover{
+    position: relative;
     display: block;
-} */
+    aspect-ratio: 16/9;
+    margin-bottom: 0.75rem;
+}
+
+.card-video .image{
+    display: block;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-video time{
+    position: absolute;
+    right: 0.5rem;
+    bottom: 0.5rem;
+    background-color: rgba(0,0,0,.8);
+    color: var(--text-color-white);
+    font-size: var(--smaller-font-size);
+    padding: 0 0.25rem;
+    border-radius: var(--border-radius);
+}
+
+.card-video .user-avatar{
+    --size: 36px;
+    margin-right: 0.75rem;
+}
+
+.card-video .content{
+    font-size: var(--small-font-size);
+    color: var(--text-color-alt);
+}
+
+.card-video .title{
+    color: var(--text-color);
+    margin-bottom: 0.25rem;
+}
+
+/* Video information */
+.video-information .views{
+    display: inline-flex;
+}
+
+.video-information .views::after{
+    content: '\f111';
+    font-family: 'Font Awesome 5 Pro';
+    font-weight: 900;
+    font-size: 0.25rem;
+    padding: 0 0.25rem;
+    
+}
+
+/* eliminar luego */
+.main-header, .main-sidebar{
+    display: none;
+}
