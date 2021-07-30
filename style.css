@@ -56,6 +56,8 @@ body,button{
 body{
     background-color: var(--bg-color-alt);
     line-height: 1.15rem;
+    padding-top: var(--header-height);
+    padding-left: var(--sidebar-width);
 }
 
 h1,h2,h3,h4,h5,h6,b{
@@ -214,6 +216,8 @@ hr{
     width: var(--sidebar-width);
     padding: 0.75rem 0;
     overflow: auto;
+    left: 0;
+    z-index: 1;
 }
 
 .main-sidebar .link{
@@ -329,7 +333,7 @@ hr{
 /* CARD VIDEO */
 
 .card-video{
-    max-width: 300px;
+    /* max-width: 300px; */
 }
 
 .card-video a{
@@ -390,7 +394,12 @@ hr{
     
 }
 
-/* eliminar luego */
-.main-header, .main-sidebar{
-    display: none;
+/* Grid Video */
+
+.card-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+    gap: 2rem 1rem;
+    padding: 1rem 2rem;
 }
+
