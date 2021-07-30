@@ -92,6 +92,25 @@ hr{
     padding: 0 1rem;
 }
 
+[class*="row-text"]{
+    display: -webkit-box;
+    -webkit-line-clamp: var(--rows);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.rows-text-1{
+    --rows: 1;
+}
+
+.rows-text-2{
+    --rows: 2;
+}
+
+.rows-text-3{
+    --rows: 3;
+}
+
 /* WEBSITE MAIN HEADER   */
 .main-header{
     top: 0;
@@ -397,9 +416,11 @@ hr{
 /* Grid Video */
 
 .card-grid{
+    max-width: 1800px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
     gap: 2rem 1rem;
     padding: 1rem 2rem;
+    margin-inline: auto;
 }
 
