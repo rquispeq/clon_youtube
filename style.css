@@ -96,7 +96,7 @@ hr{
     padding: 0;
 }
 
-[class*="row-text"]{
+[class*="rows-text"]{
     display: -webkit-box;
     -webkit-line-clamp: var(--rows);
     -webkit-box-orient: vertical;
@@ -247,6 +247,22 @@ hr{
 
 [data-tooltip]:hover::after{
     opacity: 1;
+}
+
+.button{
+    --button-color: #CC0000;
+    --text-button-color: white;
+    --cursor-button: pointer;
+
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    font-weight: var(--font-bold);
+    border: none;
+    font-size: var(--small-font-size);
+    border-radius: var(--border-radius);
+    background-color: var(--button-color);
+    cursor: var(--cursor-button);
+    color: var(--text-button-color);
 }
 
 /* Sidebar */
@@ -500,6 +516,47 @@ body.video-page{
 
 .video-player .border{
     padding-top: 0;
+}
+
+/* video information */
+
+.video-player-information{
+    gap: 1rem;
+    color: var(--text-color);
+}
+
+.video-player-information .user-avatar{
+    --size: 3rem;
+}
+
+.video-player-information .channel-name{
+    color: inherit;
+    text-decoration: none;
+    font-size: var(--small-font-size);
+    font-weight: var(--font-bold);
+}
+
+.video-player-information .sub-count{
+    color: var(--text-color-alt);
+    font-size: var(--smaller-font-size);
+}
+
+.video-player-information .content{
+    width: 100%;
+}
+
+.video-player-information .header{
+    margin-bottom: 1rem;
+}
+
+.video-player-information .header .button{
+    margin-left: auto;
+}
+
+.video-player-information .caption{
+    max-width: 600px;
+    line-height: 1.25rem;
+    font-size: var(--small-font-size);
 }
 
 .cards-sidebar{
