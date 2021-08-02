@@ -266,6 +266,17 @@ hr{
     color: var(--text-button-color);
 }
 
+.button[disabled]{
+    --button-color:var(--bg-color-active);
+    --text-button-color: var(--grey-color);
+    --cursor-button: initial;
+}
+
+.button.link{
+    --text-button-color: var(--text-color-alt);
+    --button-color: transparent;
+}
+
 /* Sidebar */
 
 .main-sidebar{
@@ -577,8 +588,23 @@ body.video-page{
 
 .comment-form .input{
     position: relative;
-    box-shadow: 0 -1px solid var(--grey-color);
+    box-shadow: 0 -1px inset var(--grey-color);
     outline: none;
+    font-size: var(--small-font-size);
+    margin-bottom: 0.75rem;
+
+}
+
+/* SIMULA UN PLACEHOLDER */
+.comment-form .input:empty::before{
+    content: 'Agrega un comentario público';
+    color: var(--grey-color-alt)
+}
+
+.comment-form .input:not(:empty) ~ .buttons-container .button[disabled]{
+    background-color: red;
+    color: var(--text-color-white);
+    cursor: pointer;
 }
 
 .comment-form .input::after{
@@ -597,6 +623,10 @@ body.video-page{
     left: 0;
 }
 
+.comment-form .buttons-container{
+    margin-left: auto;
+}
+
 .comment-form .user-avatar{
     --size: 2.5rem;
 }
@@ -604,4 +634,8 @@ body.video-page{
 .cards-sidebar{
     background-color: orange;
     grid-column-start: span 3;
+}
+
+body{
+    min-height: 200vh;
 }
