@@ -559,6 +559,11 @@ body.video-page{
     font-size: var(--small-font-size);
 }
 
+/* seccion de comentarios */
+.comments-information{
+    align-items: center;
+}
+
 .cards-sidebar{
     background-color: orange;
     grid-column-start: span 3;
